@@ -232,14 +232,75 @@ body {
   cursor: pointer;
   padding: 8px;
   margin-left: auto;
+  z-index: 1002;
+  position: relative;
 }
 .hamburger span {
   display: block;
   width: 24px; height: 2px;
   background: var(--white);
   border-radius: 2px;
-  transition: var(--transition);
+  transition: transform 0.35s ease, opacity 0.25s ease;
+  transform-origin: center;
 }
+/* Hide hamburger when menu is open (circular X button takes over) */
+.hamburger.active {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hamburger → X animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== CLOSE BUTTON INSIDE MENU OVERLAY ===== */
+.nav-close-item {
+  display: none; /* hidden by default; shown only when overlay is open */
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  list-style: none;
+}
+.nav-links.open .nav-close-item {
+  display: block;
+}
+.nav-close-btn {
+  width: 48px; height: 48px;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  transition: var(--transition);
+  position: relative;
+}
+.nav-close-btn:hover {
+  background: rgba(178,34,34,0.4);
+  border-color: rgba(178,34,34,0.6);
+  transform: rotate(90deg) scale(1.1);
+}
+.nav-close-btn span {
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  position: absolute;
+}
+.nav-close-btn span:nth-child(1) { transform: rotate(45deg); }
+.nav-close-btn span:nth-child(2) { transform: rotate(-45deg); }
 
 /* ========== HERO ========== */
 .hero {
@@ -991,6 +1052,7 @@ body {
   .logo-name { font-size: 0.82rem; letter-spacing: 1px; }
   .logo-sub { display: none; }
   .nav-links.open {
+    position: fixed;
     display: flex;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -1256,3 +1318,37 @@ body {
 }
 
 
+
+
+
+/* ========== FOOTER LEGAL LINKS ========== */
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.footer-legal-links a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  position: relative;
+}
+.footer-legal-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold-light);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.footer-legal-links a:hover::after { transform: scaleX(1); }
+.footer-legal-links a:hover { color: var(--white); }
+.footer-legal-sep {
+  color: rgba(255,255,255,0.25);
+  font-size: 0.75rem;
+}

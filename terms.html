@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Varahi Associates</title>
+  <meta name="description" content="Terms of Service for Varahi Associates - Insurance & Financial Services, Hyderabad." />
+  <link rel="icon" type="image/jpeg" href="public/logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .policy-hero {
+      background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 50%, var(--red-dark) 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .policy-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(200,151,10,0.18) 0%, transparent 60%);
+    }
+    .policy-hero-content { position: relative; z-index: 1; }
+    .policy-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .policy-hero p { color: rgba(255,255,255,0.7); font-size: 1rem; }
+    .policy-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .policy-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+    }
+    .policy-section {
+      margin-bottom: 48px;
+      padding: 36px 40px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .policy-section:hover { box-shadow: var(--shadow-md); }
+    .policy-section h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .policy-section h2 i {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--navy), var(--red));
+      color: var(--white);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .policy-section p, .policy-section li {
+      color: var(--gray-700);
+      font-size: 0.97rem;
+      line-height: 1.8;
+    }
+    .policy-section ul {
+      padding-left: 20px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .policy-section li::marker { color: var(--red); }
+    .policy-updated {
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 0.85rem;
+      margin-bottom: 48px;
+      padding: 14px 24px;
+      background: var(--cream);
+      border-radius: 50px;
+      display: inline-block;
+      border: 1px solid var(--gray-200);
+    }
+    .policy-updated-wrap { text-align: center; }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 36px;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+    .back-btn:hover { gap: 16px; }
+    .terms-highlight {
+      background: linear-gradient(135deg, rgba(178,34,34,0.05), rgba(26,35,126,0.05));
+      border-left: 4px solid var(--red);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+    @media (max-width: 640px) {
+      .policy-section { padding: 24px 20px; }
+      .policy-body { padding: 48px 16px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="public/logo.jpeg" alt="Varahi Associates Logo" class="nav-logo-img" />
+        <div class="logo-text">
+          <span class="logo-name">VARAHI ASSOCIATES</span>
+          <span class="logo-sub">Insurance &amp; Financial Services</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-close-item">
+          <button class="nav-close-btn" id="navClose" aria-label="Close menu"><span></span><span></span></button>
+        </li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#partners" class="nav-link">Partners</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Get a Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="policy-hero">
+    <div class="policy-hero-content">
+      <div class="hero-badge"><i class="fa-solid fa-file-contract"></i> &nbsp;Legal Document</div>
+      <h1>Terms of Service</h1>
+      <p>Last updated: September 2026 &nbsp;|&nbsp; Varahi Associates, Hyderabad</p>
+    </div>
+  </section>
+
+  <div class="policy-body">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+    <div class="policy-updated-wrap">
+      <span class="policy-updated">&#128197; Effective Date: 1st May 2016 &nbsp;|&nbsp; Last Revised: September 2026</span>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-handshake"></i> Agreement to Terms</h2>
+      <p>By accessing our website or engaging our insurance and financial services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, please do not use our services.</p>
+      <div class="terms-highlight">These terms apply to all visitors, clients, and users of Varahi Associates services.</div>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-briefcase"></i> Our Services</h2>
+      <p>Varahi Associates provides insurance advisory and financial services, including but not limited to:</p>
+      <ul>
+        <li>Health, motor, life, property, and travel insurance advisory.</li>
+        <li>Facilitating insurance applications with our partner insurers.</li>
+        <li>Claim assistance and policy renewal support.</li>
+        <li>Financial planning and investment advisory services.</li>
+      </ul>
+      <p style="margin-top:12px;">We act as an intermediary between you and our partner insurance companies. Final policy terms, premiums, and claim decisions are governed by the respective insurer's policies.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-user-check"></i> User Responsibilities</h2>
+      <p>As a user of our services, you agree to:</p>
+      <ul>
+        <li>Provide accurate, complete, and up-to-date information when requested.</li>
+        <li>Not misrepresent your identity, health status, or any material facts relevant to an insurance application.</li>
+        <li>Use our website and services only for lawful purposes.</li>
+        <li>Not attempt to gain unauthorised access to any part of our systems.</li>
+        <li>Promptly notify us of any changes to your contact or personal information.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer of Warranties</h2>
+      <p>Our website and services are provided on an "as is" and "as available" basis. Varahi Associates makes no warranties, express or implied, regarding:</p>
+      <ul>
+        <li>The accuracy or completeness of information on our website.</li>
+        <li>Uninterrupted or error-free access to the website.</li>
+        <li>The outcome of any insurance application or claim.</li>
+        <li>Returns, performance, or suitability of any financial product recommended.</li>
+      </ul>
+      <div class="terms-highlight">Insurance and investment products are subject to market risks. Please read all policy documents carefully before subscribing.</div>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-ban"></i> Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, Varahi Associates shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our services, including but not limited to loss of income, data, or business opportunity. Our total liability, in any case, shall not exceed the service fees paid by you in the three months preceding the claim.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-copyright"></i> Intellectual Property</h2>
+      <p>All content on this website — including text, graphics, logos, icons, and images — is the property of Varahi Associates and is protected under applicable intellectual property laws. You may not reproduce, distribute, or use any content without our prior written consent.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-link-slash"></i> Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites (such as insurer portals). These links are provided for your convenience only. Varahi Associates has no control over the content of those sites and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-rotate"></i> Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting to our website. Your continued use of our services after any changes constitutes your acceptance of the revised terms. We encourage you to review these terms periodically.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-scale-balanced"></i> Governing Law</h2>
+      <p>These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes arising from these terms or your use of our services shall be subject to the exclusive jurisdiction of the courts in Hyderabad, Telangana, India.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
+      <p>For any questions regarding these Terms of Service, please reach out to us:</p>
+      <ul>
+        <li><strong>Business:</strong> Varahi Associates</li>
+        <li><strong>Address:</strong> 7-1-621/256, SR Naar Building, 6th Floor, Sahithi Arcade, Circle 34, Hyderabad, Telangana - 500038</li>
+        <li><strong>Phone:</strong> <a href="tel:+919177479644">+91 91774 79644</a></li>
+        <li><strong>Email:</strong> <a href="mailto:Bonaraj9494@gmail.com">Bonaraj9494@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none;">
+      <div class="container">
+        <p>&copy; 2026 Varahi Associates. All rights reserved.</p>
+        <p class="footer-note">
+          <a href="privacy-policy.html" style="color:var(--gold);text-decoration:none;">Privacy Policy</a>
+          &nbsp;|&nbsp;
+          <a href="terms.html" style="color:var(--gold);text-decoration:none;">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    const navClose = document.getElementById("navClose");
+    function openMenu() { navLinks.classList.add("open"); hamburger.classList.add("active"); document.body.style.overflow = "hidden"; }
+    function closeMenu() { navLinks.classList.remove("open"); hamburger.classList.remove("active"); document.body.style.overflow = ""; }
+    hamburger.addEventListener("click", () => navLinks.classList.contains("open") ? closeMenu() : openMenu());
+    if (navClose) navClose.addEventListener("click", closeMenu);
+    navLinks.querySelectorAll(".nav-link").forEach(l => l.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeMenu(); });
+  </script>
+</body>
+</html>

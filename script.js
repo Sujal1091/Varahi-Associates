@@ -15,16 +15,48 @@ window.addEventListener("scroll", () => {
 // ===== HAMBURGER MENU =====
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+const navClose = document.getElementById("navClose");
+
+function openMenu() {
+  navLinks.classList.add("open");
+  hamburger.classList.add("active");
+  document.body.style.overflow = "hidden"; // prevent background scroll
+}
+
+function closeMenu() {
+  navLinks.classList.remove("open");
+  hamburger.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
 hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-  hamburger.classList.toggle("active");
+  if (navLinks.classList.contains("open")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
 });
-// Close on nav link click
+
+// Close button inside the overlay
+if (navClose) {
+  navClose.addEventListener("click", closeMenu);
+}
+
+// Close on any nav link click
 navLinks.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    hamburger.classList.remove("active");
-  });
+  link.addEventListener("click", closeMenu);
+});
+
+// Close when clicking outside the menu (on the semi-transparent overlay itself)
+navLinks.addEventListener("click", (e) => {
+  if (e.target === navLinks) closeMenu();
+});
+
+// Close on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && navLinks.classList.contains("open")) {
+    closeMenu();
+  }
 });
 
 // ===== ACTIVE NAV LINK ON SCROLL =====
@@ -155,3 +187,4 @@ window.addEventListener("scroll", () => {
 });
 
 console.log("Varahi Associates website loaded successfully!");
+

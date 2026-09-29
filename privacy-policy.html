@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Varahi Associates</title>
+  <meta name="description" content="Privacy Policy of Varahi Associates - Insurance & Financial Services, Hyderabad." />
+  <link rel="icon" type="image/jpeg" href="public/logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .policy-hero {
+      background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 50%, var(--red-dark) 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .policy-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(178,34,34,0.25) 0%, transparent 60%);
+    }
+    .policy-hero-content { position: relative; z-index: 1; }
+    .policy-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .policy-hero p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+    }
+    .policy-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .policy-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+    }
+    .policy-section {
+      margin-bottom: 48px;
+      padding: 36px 40px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .policy-section:hover { box-shadow: var(--shadow-md); }
+    .policy-section h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .policy-section h2 i {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--red), var(--navy));
+      color: var(--white);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .policy-section p, .policy-section li {
+      color: var(--gray-700);
+      font-size: 0.97rem;
+      line-height: 1.8;
+    }
+    .policy-section ul {
+      padding-left: 20px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .policy-section li::marker { color: var(--red); }
+    .policy-updated {
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 0.85rem;
+      margin-bottom: 48px;
+      padding: 14px 24px;
+      background: var(--cream);
+      border-radius: 50px;
+      display: inline-block;
+      border: 1px solid var(--gray-200);
+    }
+    .policy-updated-wrap { text-align: center; }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 36px;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+    .back-btn:hover { gap: 16px; }
+    @media (max-width: 640px) {
+      .policy-section { padding: 24px 20px; }
+      .policy-body { padding: 48px 16px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="public/logo.jpeg" alt="Varahi Associates Logo" class="nav-logo-img" />
+        <div class="logo-text">
+          <span class="logo-name">VARAHI ASSOCIATES</span>
+          <span class="logo-sub">Insurance &amp; Financial Services</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-close-item">
+          <button class="nav-close-btn" id="navClose" aria-label="Close menu"><span></span><span></span></button>
+        </li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#partners" class="nav-link">Partners</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Get a Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="policy-hero">
+    <div class="policy-hero-content">
+      <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> &nbsp;Legal Document</div>
+      <h1>Privacy Policy</h1>
+      <p>Last updated: September 2026 &nbsp;|&nbsp; Varahi Associates, Hyderabad</p>
+    </div>
+  </section>
+
+  <div class="policy-body">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+    <div class="policy-updated-wrap">
+      <span class="policy-updated">&#128197; Effective Date: 1st May 2016 &nbsp;|&nbsp; Last Revised: September 2026</span>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-circle-info"></i> Introduction</h2>
+      <p>Varahi Associates ("we", "our", or "us") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our insurance and financial services. Please read this policy carefully.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-database"></i> Information We Collect</h2>
+      <p>We may collect the following types of personal information:</p>
+      <ul>
+        <li><strong>Personal Identification:</strong> Name, date of birth, gender, and government-issued ID details.</li>
+        <li><strong>Contact Information:</strong> Phone number, email address, and residential/business address.</li>
+        <li><strong>Financial Information:</strong> Income details, existing policies, and financial goals shared for advisory purposes.</li>
+        <li><strong>Communication Data:</strong> Records of your enquiries, messages, and interactions with our team.</li>
+        <li><strong>Device &amp; Usage Data:</strong> IP address, browser type, and pages visited on our website (via cookies).</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-gears"></i> How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide and personalise insurance and financial advisory services.</li>
+        <li>Process insurance applications and facilitate claims on your behalf.</li>
+        <li>Send you policy renewal reminders, service updates, and important notices.</li>
+        <li>Respond to your enquiries and provide customer support.</li>
+        <li>Comply with legal and regulatory obligations under IRDAI guidelines.</li>
+        <li>Improve our website, products, and services based on usage data.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-share-nodes"></i> Information Sharing</h2>
+      <p>We do <strong>not</strong> sell, rent, or trade your personal information. We may share your information only in the following circumstances:</p>
+      <ul>
+        <li><strong>Insurance Partners:</strong> With our partner insurers (Tata AIG, Liberty General, IndusInd, Future Generali, Royal Sundaram, Digit) solely to process your insurance applications and claims.</li>
+        <li><strong>Regulatory Bodies:</strong> With IRDAI or other regulatory authorities as required by law.</li>
+        <li><strong>Legal Compliance:</strong> When disclosure is required by applicable law, court order, or government authority.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-cookie-bite"></i> Cookies</h2>
+      <p>Our website uses cookies to enhance your browsing experience. Cookies are small files stored on your device. We use them to remember your preferences and analyse website traffic. You may disable cookies through your browser settings; however, some features of the site may not function properly without them.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-lock"></i> Data Security</h2>
+      <p>We implement industry-standard security measures to protect your personal data from unauthorised access, alteration, disclosure, or destruction. All sensitive data is transmitted over encrypted (HTTPS) connections. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-user-shield"></i> Your Rights</h2>
+      <p>You have the following rights regarding your personal information:</p>
+      <ul>
+        <li>Request access to the personal data we hold about you.</li>
+        <li>Request correction of inaccurate or incomplete data.</li>
+        <li>Request deletion of your personal data (subject to legal obligations).</li>
+        <li>Withdraw consent for marketing communications at any time.</li>
+        <li>Raise concerns with the relevant data protection authority.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
+      <ul>
+        <li><strong>Business:</strong> Varahi Associates</li>
+        <li><strong>Address:</strong> 7-1-621/256, SR Naar Building, 6th Floor, Sahithi Arcade, Circle 34, Hyderabad, Telangana - 500038</li>
+        <li><strong>Phone:</strong> <a href="tel:+919177479644">+91 91774 79644</a></li>
+        <li><strong>Email:</strong> <a href="mailto:Bonaraj9494@gmail.com">Bonaraj9494@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none;">
+      <div class="container">
+        <p>&copy; 2026 Varahi Associates. All rights reserved.</p>
+        <p class="footer-note">
+          <a href="privacy-policy.html" style="color:var(--gold);text-decoration:none;">Privacy Policy</a>
+          &nbsp;|&nbsp;
+          <a href="terms.html" style="color:var(--gold);text-decoration:none;">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    const navClose = document.getElementById("navClose");
+    function openMenu() { navLinks.classList.add("open"); hamburger.classList.add("active"); document.body.style.overflow = "hidden"; }
+    function closeMenu() { navLinks.classList.remove("open"); hamburger.classList.remove("active"); document.body.style.overflow = ""; }
+    hamburger.addEventListener("click", () => navLinks.classList.contains("open") ? closeMenu() : openMenu());
+    if (navClose) navClose.addEventListener("click", closeMenu);
+    navLinks.querySelectorAll(".nav-link").forEach(l => l.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeMenu(); });
+  </script>
+</body>
+</html>
