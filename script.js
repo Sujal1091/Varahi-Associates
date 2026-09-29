@@ -137,32 +137,7 @@ scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// ===== CONTACT FORM =====
-const form = document.getElementById("contactForm");
-const formSuccess = document.getElementById("formSuccess");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = document.getElementById("fname").value.trim();
-  const phone = document.getElementById("fphone").value.trim();
-  const service = document.getElementById("fservice").value;
 
-  if (!name || !phone || !service) {
-    alert("Please fill in all required fields.");
-    return;
-  }
-
-  const btn = document.getElementById("submit-btn");
-  btn.textContent = "Sending...";
-  btn.disabled = true;
-
-  setTimeout(() => {
-    btn.textContent = "Send Message";
-    btn.disabled = false;
-    formSuccess.classList.add("show");
-    form.reset();
-    setTimeout(() => formSuccess.classList.remove("show"), 5000);
-  }, 1500);
-});
 
 // ===== SMOOTH SCROLL FOR ALL ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -186,5 +161,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-console.log("Varahi Associates website loaded successfully!");
 

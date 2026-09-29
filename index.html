@@ -34,6 +34,7 @@
         <li><a href="#partners" class="nav-link">Our Partners</a></li>
         <li><a href="#why-us" class="nav-link">Why Us</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-mobile-cta"><a href="#contact" class="btn btn-primary nav-link">Get Free Quote</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Get a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -41,7 +42,6 @@
   </nav>
 
 
-  <!-- ===== MSME REGISTRATION STRIP ===== -->
   
   <section class="hero" id="home">
     <div class="hero-bg"></div>
@@ -65,11 +65,11 @@
         <a href="#services" class="btn btn-outline" id="hero-services-btn">Explore Services</a>
       </div>
     </div>
-    <div class="hero-scroll-indicator"><div class="scroll-mouse"></div><span>Scroll Down</span></div>
+    <!-- <div class="hero-scroll-indicator"><div class="scroll-mouse"></div><span>Scroll Down</span></div> -->
   </section>
 
   <div class="ticker-bar">
-    <div class="ticker-label">Our Partners:</div>
+    <div class="ticker-label"><i class="fa-solid fa-handshake"></i> Our Partners</div>
     <div class="ticker-track">
       <div class="ticker-items">
         <span>Tata AIG</span><span>Liberty General Insurance</span><span>IndusInd General Insurance</span>
@@ -80,45 +80,68 @@
     </div>
   </div>
 
-    <!-- ===== ABOUT / BUSINESS INFO SECTION ===== -->
+  <!-- ===== ABOUT / BUSINESS INFO SECTION ===== -->
   <section class="section about" id="about">
     <div class="container">
-      <div class="about-inner">
-        <div class="about-logo-side">
-          <div class="about-logo-card">
-            <img src="public/logo.jpeg" alt="Varahi Associates Logo" style="max-width:320px; width:100%;" />
-          </div>
+      <div class="about-container">
 
-        </div>
-        <div class="about-details">
+        <!-- 1. Heading -->
+        <div class="about-heading-wrap">
           <span class="section-label">Who We Are</span>
           <h2 class="section-title">Trusted Since <span class="accent">2016</span></h2>
+        </div>
+        
+        
+        <!-- 3. Lastly Company Logo -->
+        <div class="about-logo-wrapper">
+          <div class="about-logo-card">
+            <img src="public/logo.jpeg" alt="Varahi Associates Logo" class="about-logo-img" />
+            <div class="about-badge-pill">
+              <i class="fa-solid fa-certificate"></i>
+              <span>MSME Registered Firm &bull; Est. 2016</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 2. About Us Paragraph & Contact Info -->
+        <div class="about-body">
           <p class="about-desc">
             Varahi Associates is an MSME-registered insurance and financial services firm based in Hyderabad, Telangana. Since our founding in May 2016, we have been committed to providing the best-in-class insurance solutions to individuals, families, and businesses across the region.
           </p>
           <p class="about-desc">
             As a government-registered enterprise, we operate with full transparency and compliance. Our team of expert advisors is dedicated to helping you navigate the complex insurance landscape and find the most suitable coverage at the best premiums.
           </p>
+
           <div class="about-info-grid">
-            <div class="about-info-item">
-              <div class="info-label">&#128205; Address</div>
-              <div class="info-value">7-1-621/256, SR Naar Building, 6th Floor, Sahithi Arcade, Circle 34</div>
+            <div class="about-info-item address-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-text">
+                <div class="info-label">Office Address</div>
+                <div class="info-value">7-1-621/256, SR Nagar Building, 6th Floor, Sahithi Arcade, Circle 34, Hyderabad, Telangana - 500038</div>
+              </div>
             </div>
             <div class="about-info-item">
-              <div class="info-label">&#127968; City / State</div>
-              <div class="info-value">Hyderabad, Telangana - 500038</div>
+              <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <div class="info-text">
+                <div class="info-label">Phone Number</div>
+                <div class="info-value"><a href="tel:+919177479644">+91 91774 79644</a></div>
+              </div>
             </div>
             <div class="about-info-item">
-              <div class="info-label">&#128222; Phone</div>
-              <div class="info-value"><a href="tel:+919177479644">+91 91774 79644</a></div>
-            </div>
-            <div class="about-info-item">
-              <div class="info-label">&#128231; Email</div>
-              <div class="info-value"><a href="mailto:Bonaraj9494@gmail.com">Bonaraj9494@gmail.com</a></div>
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-text">
+                <div class="info-label">Email Address</div>
+                <div class="info-value"><a href="mailto:Bonaraj9494@gmail.com">Bonaraj9494@gmail.com</a></div>
+              </div>
             </div>
           </div>
-          <a href="#contact" class="btn btn-primary">Get a Free Quote Today</a>
+
+          <div class="about-action">
+            <a href="#contact" class="btn btn-primary">Get a Free Quote Today</a>
+          </div>
         </div>
+
+
       </div>
     </div>
   </section>
@@ -291,38 +314,33 @@
       <div class="section-header">
         <span class="section-label">Get in Touch</span>
         <h2 class="section-title">Let us Find You the <span class="accent">Right Plan</span></h2>
-        <p class="section-desc">Fill out the form and our expert advisors will reach out to you within 24 hours.</p>
+        <p class="section-desc">Reach out directly to our expert advisors via phone, email, or visit our Hyderabad office.</p>
       </div>
       <div class="contact-inner">
-        <div class="contact-info">
-          <div class="contact-card" id="contact-phone"><div class="contact-icon ci-phone"></div><h4>Call Us</h4><a href="tel:+919177479644" class="contact-detail">+91 91774 79644</a><p>Mon-Sat, 9 AM - 7 PM</p></div>
-          <div class="contact-card" id="contact-email"><div class="contact-icon ci-email"></div><h4>Email Us</h4><a href="mailto:Bonaraj9494@gmail.com" class="contact-detail">Bonaraj9494@gmail.com</a><p>We respond within 24 hours</p></div>
-          <div class="contact-card" id="contact-location"><div class="contact-icon ci-location"></div><h4>Visit Us</h4><span class="contact-detail">SR Naar Bldg, Sahithi Arcade, Hyderabad</span><p>Hyderabad, Telangana 500038</p></div>
-          <div class="contact-tagline"><p>"Your Trust Our Protection..."</p><span>- Varahi Associates</span></div>
+        <div class="contact-grid">
+          <div class="contact-card" id="contact-phone">
+            <div class="contact-icon ci-phone"><i class="fa-solid fa-phone-volume"></i></div>
+            <h4>Call Us</h4>
+            <a href="tel:+919177479644" class="contact-detail">+91 91774 79644</a>
+            <p>Mon - Sat, 9:00 AM - 7:00 PM</p>
+          </div>
+          <div class="contact-card" id="contact-email">
+            <div class="contact-icon ci-email"><i class="fa-solid fa-envelope"></i></div>
+            <h4>Email Us</h4>
+            <a href="mailto:Bonaraj9494@gmail.com" class="contact-detail">Bonaraj9494@gmail.com</a>
+            <p>We respond within 24 hours</p>
+          </div>
+          <div class="contact-card" id="contact-location">
+            <div class="contact-icon ci-location"><i class="fa-solid fa-location-dot"></i></div>
+            <h4>Visit Us</h4>
+            <span class="contact-detail">7-1-621/256, SR Nagar Bldg</span>
+            <p>Sahithi Arcade, Hyderabad, Telangana 500038</p>
+          </div>
         </div>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group"><label for="fname">Full Name *</label><input type="text" id="fname" name="name" placeholder="Enter your full name" required /></div>
-            <div class="form-group"><label for="fphone">Phone Number *</label><input type="tel" id="fphone" name="phone" placeholder="+91 00000 00000" required /></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="femail">Email Address</label><input type="email" id="femail" name="email" placeholder="your@email.com" /></div>
-            <div class="form-group"><label for="fservice">Insurance Type *</label>
-              <select id="fservice" name="service" required>
-                <option value="">Select Insurance Type</option>
-                <option value="health">Health Insurance</option>
-                <option value="motor">Motor Insurance</option>
-                <option value="life">Life Insurance</option>
-                <option value="property">Property Insurance</option>
-                <option value="travel">Travel Insurance</option>
-                <option value="financial">Financial Services</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group full"><label for="fmessage">Message</label><textarea id="fmessage" name="message" rows="4" placeholder="Tell us about your insurance requirements..."></textarea></div>
-          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Send Message</button>
-          <div class="form-success" id="formSuccess">Thank you! We will contact you shortly.</div>
-        </form>
+        <div class="contact-tagline">
+          <p>"Your Trust, Our Protection..."</p>
+          <span>&mdash; Varahi Associates</span>
+        </div>
       </div>
     </div>
   </section>
@@ -391,6 +409,11 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
 
