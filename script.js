@@ -1,4 +1,4 @@
-﻿// =============================================
+// =============================================
 // VARAHI ASSOCIATES - Website JavaScript
 // =============================================
 
@@ -78,7 +78,7 @@ sections.forEach(s => observer.observe(s));
 
 // ===== SCROLL-REVEAL ANIMATION =====
 const revealEls = document.querySelectorAll(
-  ".service-card, .partner-card, .testimonial-card, .feature-item, .contact-card, .section-header"
+  ".service-card, .partner-card, .testimonial-card, .feature-item, .contact-card, .section-header, .awards-leader-card, .award-gallery-card"
 );
 revealEls.forEach((el, i) => {
   el.classList.add("reveal");
@@ -160,5 +160,130 @@ window.addEventListener("scroll", () => {
     heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.3}px)`;
   }
 });
+
+// ===== PARTNERS 'SEE ALL' TOGGLE =====
+const seeAllPartnersBtn = document.getElementById("seeAllPartnersBtn");
+const partnersGrid = document.getElementById("partnersGrid");
+
+if (seeAllPartnersBtn && partnersGrid) {
+  seeAllPartnersBtn.addEventListener("click", () => {
+    const isExpanded = partnersGrid.classList.contains("show-all");
+    const btnText = seeAllPartnersBtn.querySelector(".btn-text");
+
+    if (isExpanded) {
+      partnersGrid.classList.remove("show-all");
+      seeAllPartnersBtn.classList.remove("expanded");
+      seeAllPartnersBtn.setAttribute("aria-expanded", "false");
+      if (btnText) btnText.textContent = "See All Partners";
+
+      // Smooth scroll back to top of partners section so user doesn't lose position
+      const partnersSection = document.getElementById("partners");
+      if (partnersSection) {
+        const offset = 80;
+        const top = partnersSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    } else {
+      partnersGrid.classList.add("show-all");
+      seeAllPartnersBtn.classList.add("expanded");
+      seeAllPartnersBtn.setAttribute("aria-expanded", "true");
+      if (btnText) btnText.textContent = "Show Less";
+
+      // Ensure cards have .visible class for scroll reveal
+      document.querySelectorAll(".partner-card-extra").forEach(card => {
+        card.classList.add("visible");
+      });
+    }
+  });
+}
+
+// ===== AWARDS LIGHTBOX MODAL =====
+const awardLightbox = document.getElementById("awardLightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+
+if (awardLightbox && lightboxImg) {
+  document.querySelectorAll(".award-img-wrap").forEach(wrap => {
+    wrap.addEventListener("click", () => {
+      const img = wrap.querySelector(".award-img");
+      if (img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || "Award Image";
+        awardLightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    });
+  });
+
+  const closeLightbox = () => {
+    awardLightbox.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener("click", closeLightbox);
+  }
+
+  awardLightbox.addEventListener("click", (e) => {
+    if (e.target === awardLightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && awardLightbox.classList.contains("active")) {
+      closeLightbox();
+    }
+  });
+}
+
+// ===== PAUSE AWARD VIDEO WHEN OUT OF VIEW =====
+const awardVideo = document.getElementById("awardVideo");
+if (awardVideo && "IntersectionObserver" in window) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting && !awardVideo.paused) {
+        awardVideo.pause();
+      }
+    });
+  }, { threshold: 0.25 });
+  videoObserver.observe(awardVideo);
+}
+
+// ===== SERVICES 'SEE ALL' TOGGLE =====
+const seeAllServicesBtn = document.getElementById("seeAllServicesBtn");
+const servicesGrid = document.getElementById("servicesGrid");
+
+if (seeAllServicesBtn && servicesGrid) {
+  seeAllServicesBtn.addEventListener("click", () => {
+    const isExpanded = servicesGrid.classList.contains("show-all");
+    const btnText = seeAllServicesBtn.querySelector(".btn-text");
+
+    if (isExpanded) {
+      servicesGrid.classList.remove("show-all");
+      seeAllServicesBtn.classList.remove("expanded");
+      seeAllServicesBtn.setAttribute("aria-expanded", "false");
+      if (btnText) btnText.textContent = "See All Services & Loans";
+
+      // Smooth scroll back to top of services section
+      const servicesSection = document.getElementById("services");
+      if (servicesSection) {
+        const offset = 80;
+        const top = servicesSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    } else {
+      servicesGrid.classList.add("show-all");
+      seeAllServicesBtn.classList.add("expanded");
+      seeAllServicesBtn.setAttribute("aria-expanded", "true");
+      if (btnText) btnText.textContent = "Show Less";
+
+      // Ensure cards have .visible class for scroll reveal
+      document.querySelectorAll(".service-card-extra").forEach(card => {
+        card.classList.add("visible");
+      });
+    }
+  });
+}
+
+
 
 
